@@ -1,7 +1,3 @@
-// const rangeInput = document.getElementById('rangeInput');
-// rangeInput.addEventListener('input', (event) => {
-//     rangeInput.value = 50; // Восстанавливаем значение
-// })
 
 
 let nav_buttons = document.getElementsByName('scroll_btn');

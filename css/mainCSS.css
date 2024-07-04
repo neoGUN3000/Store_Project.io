@@ -1,0 +1,173 @@
+@font-face {
+    font-family: exo;
+    src: url(../fonts/exo/Exo-Regular.woff2);
+    font-style: normal;
+    font-weight: 16px;
+    font-display: swap;
+}
+@font-face {
+    font-family: titillium;
+    src: url(../fonts/till/TitilliumWeb-Regular.woff2);
+    font-style: normal;
+    font-weight: 16px;
+    font-display: swap;
+}
+
+
+body{
+    font-family: var(--primary-font);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    
+   
+}
+.main::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+    --primary-font: 'exo', sans-serif;
+    --font-color: white;
+    --buttons-font: 'titillium' , 'sans-serif';
+    --special-text-color:springgreen;
+    --bgc-blue: rgb(0, 0, 0);
+    --letter-spacing:1.5px;
+    --regular-blur:blur(10px)
+}
+.nav-section__line{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   padding:  1px;
+
+}
+.nav-section__line:hover .nav-btn{
+    transform: scaleX(2);
+    border-right: none;
+    }
+
+.nav-section__line > input[type="radio"]{
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+}
+.nav-btn{
+    width: 5px;
+    height: 40px;
+    background-color: aliceblue;
+    margin: 5px;
+    z-index: 1000;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+
+.nav-btn:after{
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY( -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+   
+}
+.nav-section__line  input[type="radio"]:nth-child(1):checked ~.nav-btn:nth-last-child(4):after{
+    opacity: 1;
+    visibility: visible;
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.nav-section__line  input[type="radio"]:nth-child(2):checked ~.nav-btn:nth-last-child(3):after{
+    opacity: 1;
+    visibility: visible;
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.nav-section__line  input[type="radio"]:nth-child(3):checked ~.nav-btn:nth-last-child(2):after{
+    opacity: 1;
+    visibility: visible;
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.nav-section__line  input[type="radio"]:nth-child(4):checked ~.nav-btn:nth-last-child(1):after{
+    opacity: 1;
+    visibility: visible;
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+/* ______________HOME___PAGE______________ */
+.main{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+.page{
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 90vh;
+    text-align: center;
+}
+
+.heading{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+
+}
+
+
+
+.home-page{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-image: url(../img/backgrounds/web-design-2906159.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.skill-page{
+    background-color: aqua;
+
+
+}
+
+.portfolio-page{
+  
+}
+.to_contact-page{
+    height: 100vh;
+    background-color: rgb(206, 88, 88);}

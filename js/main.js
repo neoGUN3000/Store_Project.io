@@ -22,6 +22,8 @@ for(let i = 0; i < heading.length; i++){
 }
 
 
+
+
 // ______________CLICK__BTN__SCROLL___TO__PAGE___
 
 for(let i = 0; i < nav_buttons.length; i++){
@@ -40,13 +42,13 @@ for(let i = 0; i < nav_buttons.length; i++)
 }
 // ____________BLACK____BTN_____WHEN_____PAGE___IS___INTO___VIEW__
 
-// document.addEventListener('DOMContentLoaded', () =>{
-//   window.addEventListener('scroll', () => {
-//     let height_of_page =  document.querySelectorAll('.page');
-//   console.log(height_of_page[1].offsetHeigth.value)
-//   });
-  
-// })
 
+
+for(let i = 0; i < pages.length; i++){
+  pages[i].addEventListener('mouseover', () => {
+    nav_buttons[i].checked = true;
+    console.log('it works')});
+
+}
 
 

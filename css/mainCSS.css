@@ -13,7 +13,6 @@
     font-display: swap;
 }
 
-
 body{
     font-family: var(--primary-font);
     overflow: hidden;
@@ -27,13 +26,56 @@ body{
 
 :root{
     --primary-font: 'exo', sans-serif;
-    --font-color: white;
+    --font-color: rgb(1, 1, 54);
     --buttons-font: 'titillium' , 'sans-serif';
     --special-text-color:springgreen;
-    --bgc-blue: rgb(0, 0, 0);
     --letter-spacing:1.5px;
-    --regular-blur:blur(10px)
+    --regular-blur:blur(10px);
+    --cage-hight:41px;
+    --cage-width:200px;
+    --regular-fs:16px;
+    --middle-fs:20px;
+    --large-fs:30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LEFT BUTTONS TO GOES TO PAGES_________________________________ */
+
+
+
+
+
+
+
+
+
 .nav-section__line{
     width: 30px;
     height: 250px;
@@ -59,7 +101,7 @@ body{
 }
 .nav-btn{
     width: 5px;
-    height: 40px;
+    height: var(--cage-hight);
     background-color: aliceblue;
     margin: 5px;
     z-index: 1000;
@@ -87,7 +129,7 @@ body{
     transition: .4s;
    
 }
-.nav-section__line  input[type="radio"]:nth-child(1):checked ~.nav-btn:nth-last-child(4):after{
+.nav-section__line  input[type="radio"]:nth-child(1):checked ~.nav-btn:nth-last-child(7):after{
     opacity: 1;
     visibility: visible;
     width:100%;
@@ -95,7 +137,7 @@ body{
     border-radius: 15px;
     border: 1px solid rgb(255, 255, 255);
 }
-.nav-section__line  input[type="radio"]:nth-child(2):checked ~.nav-btn:nth-last-child(3):after{
+.nav-section__line  input[type="radio"]:nth-child(2):checked ~.nav-btn:nth-last-child(6):after{
     opacity: 1;
     visibility: visible;
     width:100%;
@@ -103,7 +145,7 @@ body{
     border-radius: 15px;
     border: 1px solid rgb(255, 255, 255);
 }
-.nav-section__line  input[type="radio"]:nth-child(3):checked ~.nav-btn:nth-last-child(2):after{
+.nav-section__line  input[type="radio"]:nth-child(3):checked ~.nav-btn:nth-last-child(5):after{
     opacity: 1;
     visibility: visible;
     width:100%;
@@ -111,7 +153,31 @@ body{
     border-radius: 15px;
     border: 1px solid rgb(255, 255, 255);
 }
-.nav-section__line  input[type="radio"]:nth-child(4):checked ~.nav-btn:nth-last-child(1):after{
+.nav-section__line  input[type="radio"]:nth-child(4):checked ~.nav-btn:nth-last-child(4):after{
+    opacity: 1;
+    visibility: visible;
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.nav-section__line  input[type="radio"]:nth-child(5):checked ~.nav-btn:nth-last-child(3):after{
+    opacity: 1;
+    visibility: visible;
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.nav-section__line  input[type="radio"]:nth-child(6):checked ~.nav-btn:nth-last-child(2):after{
+    opacity: 1;
+    visibility: visible;
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.nav-section__line  input[type="radio"]:nth-child(7):checked ~.nav-btn:nth-last-child(1):after{
     opacity: 1;
     visibility: visible;
     width:100%;
@@ -124,7 +190,209 @@ body{
 
 
 
-/* ______________HOME___PAGE______________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+left nav bar _______________________________________*/
+
+
+
+
+.side-nav__list{  
+width: 200px;
+height: 100vh;
+position: absolute;
+/* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 66%, rgba(255,255,255,0) 100%); */
+list-style: none;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+text-transform: uppercase;
+font-weight: 900;
+font-family: var(--primary-font);
+backdrop-filter: var(--regular-blur);
+}
+.side-nav__list-row{
+    height: var(--cage-hight);
+    transition: .4s;
+    font-size:var(--regular-fs) ;
+  
+}
+
+
+.side-nav__list-row:hover{
+font-size: var(--middle-fs);
+}
+
+
+
+.side-nav__link{
+    display: flex;
+    align-items: center;
+    height:80px;
+    margin-left: 5px;
+}
+
+.side-nav__list-row::after{
+    content: '';
+    position: relative;
+    left: 0;
+    bottom: 5px;
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+   
+}
+.side-nav__list-row:last-child::after{
+    display: none;
+}
+.side-nav__link span{margin-left: 5px;}
+.side-nav img {
+    max-width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___ABILITY TO OPEN AND CLOSE SIDE BAR__________________________________ */
+
+
+#menu-opener{
+    visibility: hidden;
+    z-index: -10;
+    opacity: 0;
+    position: absolute;
+    
+}
+
+
+.swicher{
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    z-index: 1000;
+    display: flex;
+    align-items:center ;
+    height: var(--cage-hight);
+    width: var(--cage-width);
+    cursor: pointer;
+    transform-origin:left;
+    user-select: none;
+    transition: .4s;
+}
+.swicher span:hover{
+font-size: var(--middle-fs);
+}
+.swich-on{
+    transform: translateX(-110%);
+}
+
+
+
+.swicher span{
+    font-size: var(--regular-fs);
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: .4s;
+
+}
+
+
+
+#menu-opener:checked + .nav-manipulation > .swich-off{
+    transform: translateX(-110%);
+} 
+.side-nav__list{
+    transition: .4s;
+}
+#menu-opener:checked ~ .side-nav__list{
+    transform: translateX(-110%);
+} 
+#menu-opener:checked + .nav-manipulation > .swich-on{
+    transform: translateX(0%);
+    backdrop-filter: var(--regular-blur);
+    border-bottom-right-radius: 20px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GENERAL STYLES OF PAGES_______________________________________________ */
+
 .main{
     width: 100vw;
     height: 100vh;
@@ -134,6 +402,7 @@ body{
     scroll-behavior: smooth;
 }
 .page{
+    scroll-behavior: smooth;
     scroll-snap-align: start;
     width: 100vw;
     height: 90vh;
@@ -141,11 +410,12 @@ body{
 .page:hover .heading::after{
     opacity: 1;
     transform: scaleX(1.1);
+    margin-top: 15px;
 }
 
 .heading {
     width: max-content;
-    font-size: 30px;
+    font-size: var(--large-fs);
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none;
@@ -176,19 +446,12 @@ body{
     display: flex;
     justify-items: center;
     align-items: center;
-    background-image: url(../img/backgrounds/web-design-2906159.jpg);
+    background-image: url(../img/book/03.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.product__page{
-    background-color: aqua;
 
-
+.home__page .heading {
+    color: aliceblue;
 }
-
-.make-oder__page{
-  
-}
-.to_contact__page{
-    background-color: rgb(206, 88, 88);}

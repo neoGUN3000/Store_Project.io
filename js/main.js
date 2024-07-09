@@ -11,11 +11,10 @@ let heading = document.querySelectorAll('.heading');
 
 
 
-
 // _____mouse___on____HEADING____
 
 for(let i = 0; i < heading.length; i++){
-  heading[i].addEventListener('mouseover', () => {
+  heading[i].addEventListener('click', () => {
    
     heading[i].scrollIntoView({ behavior: 'smooth' })} );
 
@@ -47,8 +46,29 @@ for(let i = 0; i < nav_buttons.length; i++)
 for(let i = 0; i < pages.length; i++){
   pages[i].addEventListener('mouseover', () => {
     nav_buttons[i].checked = true;
-    console.log('it works')});
+    
+    });
 
 }
 
 
+
+// scroll by sides links______________________________
+
+
+
+function visiting_links(){
+  let links = document.querySelectorAll('.side-nav__link') ;
+  links.forEach(link =>{
+    link.addEventListener('click', function(event){
+      event.preventDefault();
+     const   sectionId = link.getAttribute('href');
+      const  section = document.querySelector(sectionId);
+      if(section){
+        section.scrollIntoView({behavior: 'smooth'});
+  
+      }
+    })
+  })
+}
+window.addEventListener('DOMContentLoaded', visiting_links());

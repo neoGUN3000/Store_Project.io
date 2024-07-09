@@ -5,45 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/mainCSS.css">
+    <link rel="stylesheet" href="./css/equipmentPage.css">
+    <link rel="stylesheet" href="./css/oderPage.css">
+    <link rel="stylesheet" href="./css/descriptionPage.css">
+    <link rel="stylesheet" href="./css/deliveryPage.css">
+    <link rel="stylesheet" href="./css/giftPage.css">
+    <link rel="stylesheet" href="./css/reviewsPage.css">
     <title>Store</title>
 </head>
 <body>
    
         
-            <nav class="nav-section__line">
-             
-             
-             <input type="radio" name="scroll_btn" id="scroll_to_home-page" checked>
-             <input type="radio" name="scroll_btn" id="scroll_to_skill-page">
-             <input type="radio" name="scroll_btn"  id="scroll_to_portfolio-page">
-             <input type="radio" name="scroll_btn" id="scroll_to_contact-page">
-             
-             
-             
-             <label for="scroll_to_home-page"class="nav-btn" ></label>
-             <label for="scroll_to_skill-page"class="nav-btn" ></label>
-             <label for="scroll_to_portfolio-page"class="nav-btn" ></label>
-             <label for="scroll_to_contact-page"class="nav-btn" ></label>
+            <header>
+                <nav class="nav-section__line">
+                 
+                 
+                 <input type="radio" name="scroll_btn" id="scroll_to_home-page" checked>
+                 <input type="radio" name="scroll_btn" id="scroll_to_equipment-page">
+                 <input type="radio" name="scroll_btn"  id="scroll_to_make-oder-page">
+                 <input type="radio" name="scroll_btn" id="scroll_to_description-page">
+                 <input type="radio" name="scroll_btn" id="scro_to_delivery-page">
+                 <input type="radio" name="scroll_btn" id="scro_to_gifts-page">
+                 <input type="radio" name="scroll_btn" id="scro_to_reviews-page">
+                 
+                 
+                 
+                 <label for="scroll_to_home-page"class="nav-btn" ></label>
+                 <label for="scroll_to_equipment-page"class="nav-btn" ></label>
+                 <label for="scroll_to_make-oder-page"class="nav-btn" ></label>
+                 <label for="scroll_to_description-page"class="nav-btn" ></label>
+                 <label for="scro_to_delivery-page"class="nav-btn" ></label>
+                 <label for="scro_to_gifts-page"class="nav-btn" ></label>
+                 <label for="scro_to_reviews-page"class="nav-btn"></label>
+    
+               
+    
+                </nav>
+    
+    
+                
+                <menu class="side-nav">
+                    <input type="checkbox" id="menu-opener">
+                    <label for="menu-opener" class="nav-manipulation" title="CLOSE  MENU">
+                      <div class="swich-off swicher">
+                            
+                        <span>close menu</span>
+                         <img  class="menu-closer"  src="/img/icons/eye-closed-svgrepo-com.svg" alt="closer">
+                            
+                      </div>
+                      <div class="swich-on swicher">
+                          <span>open menu</span>
+                        <img class="menu-opener" src="/img/icons/eye-svgrepo-com.svg" opener">
+                      </div>
+                    </label>
+                    <ul class="side-nav__list">
+                        <li class="side-nav__list-row">
+                            <a href="#home" class="side-nav__link" >
+                                <img src="./img/icons/equcment-2-svgrepo-com.svg" alt="home">
+                                <span>home</span>
+                            </a></li>
+                        <li class="side-nav__list-row">
+                            <a href="#equipment" class="side-nav__link" >
+                                <img src="./img/icons/flash-drive-svgrepo-com.svg" alt="  equipment">
+                                <span>equipment</span>
+                            </a></li>
+                            <li class="side-nav__list-row">
+                                <a href="#make-oder" class="side-nav__link">
+                                    <img src="./img/icons/cart-plus-svgrepo-com.svg" alt="  order">
+                                    <span>order</span>  
+                                </a></li>
+                        <li class="side-nav__list-row">
+                            <a href="#description" class="side-nav__link" >
+                                <img src="./img/icons/info-circle-svgrepo-com.svg" alt=" description">
+                               <span> description</span>
 
-
-
-
-
-            </nav>
+                            </a></li>
+                            <li class="side-nav__list-row">
+                                <a href="#delivery" class="side-nav__link">
+                                    <img src="./img/icons/scooter-svgrepo-com.svg" alt="delivery">
+                                    <span>delivery</span>
+                                </a></li>
+                            <li class="side-nav__list-row">
+                                <a href="#gifts" class="side-nav__link">
+                                    <img src="./img/icons/medal-ribbons-star-svgrepo-com.svg" alt="gifts">
+                                    <span> gifts</span>
+                                </a></li>
+                                <li class="side-nav__list-row">
+                                    <a href="#reviews" class="side-nav__link">
+                                        <img src="./img/icons/user-speak-svgrepo-com.svg" alt="reviews">
+                                        <span> reviews</span>
+                                        
+                                    </a></li>
+                    </ul>
+    
+    
+                </menu>
+            </header>
           
    
  <main class="main">
-<section class="home__page page">
-    <h2 class="heading" title="my-name">Gritting with the user!!!</h2>
+<section class="home__page page" id="home">
+    <h2 class="heading" title="my-name">Home page</h2>
 </section>
-<section class="product__page page">
-    <h2 class="heading" title="my-product">my-product</h2>
+<section class="equipment__page page" id="equipment">
+    <h2 class="heading" title="my-equipment">equipment</h2>
 </section>
-<section class="make-oder__page page">
+<section class="make-oder__page page" id="make-oder">
     <h2 class="heading" title="make-oder">make an oder</h2>
 </section>
-<section class="to_contact__page page" id="contact-page">
-    <h2 class="heading" title="contact me">contact me</h2>
+<section class="to_description__page page" id="description">
+    <h2 class="heading" title="to_description__page">description</h2>
+</section>
+<section class="to_delivery__page page" id="delivery">
+    <h2 class="heading" title="to_delivery__page">delivery</h2>
+</section>
+<section class="to_gifts__page page" id="gifts">
+    <h2 class="heading" title="gifts">gifts</h2>
+</section>
+<section class="to_reviews__page page" id="reviews">
+    <h2 class="heading" title="to_reviews__page">reviews-page</h2>
 </section>
  </main>
 

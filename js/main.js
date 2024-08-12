@@ -3,57 +3,39 @@
 let nav_buttons = document.getElementsByName('scroll_btn');
 let pages = document.querySelectorAll('.page');
 let heading = document.querySelectorAll('.heading');
-
-
-
-
-
+const headingArr = Array.from(heading);
+// называть множиство множиством 
 
 
 
 // _____mouse___on____HEADING____
 
-for(let i = 0; i < heading.length; i++){
-  heading[i].addEventListener('click', () => {
-   
-    heading[i].scrollIntoView({ behavior: 'smooth' })} );
-
-}
 
 
 
 
-// ______________CLICK__BTN__SCROLL___TO__PAGE___
 
-for(let i = 0; i < nav_buttons.length; i++){
-  nav_buttons[i].addEventListener('click', scrollIntoViewport);
-}
-
-
-
-function  scrollIntoViewport(){
-for(let i = 0; i < nav_buttons.length; i++)
-    if(nav_buttons[i].checked){
-       
-      pages[i].scrollIntoView({ behavior: 'smooth' });
-      
-    }
-}
 // ____________BLACK____BTN_____WHEN_____PAGE___IS___INTO___VIEW__
-
-
-
-for(let i = 0; i < pages.length; i++){
-  pages[i].addEventListener('mouseover', () => {
-    nav_buttons[i].checked = true;
-    
-    });
-
+function distanceBetween (element){
+  const gettingElement = element.getBoundingClientRect();
+  const windHieght = window.innerHeight;
+return gettingElement.top < windHieght;
 }
 
 
 
-// scroll by sides links______________________________
+window.addEventListener('mouseover', () => {
+  for(let i = 0; i < heading.length;i++){
+    const result = distanceBetween(headingArr[i]);
+   if(result){
+    headingArr[i].classList.add('showingHead');
+   }else{
+    headingArr[i].classList.remove('showingHead');
+   }
+  }
+ 
+})
+
 
 
 
@@ -63,9 +45,12 @@ function visiting_links(){
     link.addEventListener('click', function(event){
       event.preventDefault();
      const   sectionId = link.getAttribute('href');
-      const  section = document.querySelector(sectionId);
-      if(section){
-        section.scrollIntoView({behavior: 'smooth'});
+    
+   
+      if(sectionId){
+        window.location.href = sectionId;
+        sectionId.scrollIntoView({behavior: 'smooth'});
+
   
       }
     })

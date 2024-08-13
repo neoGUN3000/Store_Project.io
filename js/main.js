@@ -20,20 +20,45 @@ function distanceBetween (element){
   const gettingElement = element.getBoundingClientRect();
   const windHieght = window.innerHeight;
 return gettingElement.top < windHieght;
+
+
 }
 
 
 
 window.addEventListener('mouseover', () => {
-  for(let i = 0; i < heading.length;i++){
+  const windWidth = window.innerWidth;
+  if(windWidth > 1000){
+    for(let i = 0; i < heading.length;i++){
     const result = distanceBetween(headingArr[i]);
-   if(result){
+    console.log(windWidth);
+   if(result ){
+
     headingArr[i].classList.add('showingHead');
    }else{
     headingArr[i].classList.remove('showingHead');
    }
+  }}else{
+
+  
   }
  
+ 
+})
+
+window.addEventListener('touchstart', () => {
+
+    for(let i = 0; i < heading.length;i++){
+    const result = distanceBetween(headingArr[i]);
+   
+   if(result ){
+
+    headingArr[i].classList.add('showingHead');
+   }else{
+    headingArr[i].classList.remove('showingHead');
+   }
+
+  }
 })
 
 

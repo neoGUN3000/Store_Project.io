@@ -8,6 +8,7 @@ const headingArr = Array.from(heading);
 
 
 
+
 // _____mouse___on____HEADING____
 
 
@@ -19,29 +20,43 @@ const headingArr = Array.from(heading);
 function distanceBetween (element){
   const gettingElement = element.getBoundingClientRect();
   const windHieght = window.innerHeight;
-return gettingElement.top < windHieght;
+  return gettingElement.top < windHieght;
 
 
 }
 
 
 
+const animatedElement = document.querySelectorAll('.animated');
+const animatedElementArr = Array.from(animatedElement);
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  
+  for(let i = 0; i < animatedElementArr.length; i++){
+    animatedElementArr[i].classList.add('showingElement');
+    }
+    
+});
+
+
+
+
+
 window.addEventListener('mouseover', () => {
   const windWidth = window.innerWidth;
   if(windWidth > 1000){
-    for(let i = 0; i < heading.length;i++){
+    for(let i = 0; i < headingArr.length;i++){
     const result = distanceBetween(headingArr[i]);
     console.log(windWidth);
-   if(result ){
-
+   if(result){
     headingArr[i].classList.add('showingHead');
+  
    }else{
     headingArr[i].classList.remove('showingHead');
    }
-  }}else{
+  }}
 
-  
-  }
  
  
 })
@@ -57,6 +72,7 @@ window.addEventListener('touchstart', () => {
    }else{
     headingArr[i].classList.remove('showingHead');
    }
+ 
 
   }
 })

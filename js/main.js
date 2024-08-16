@@ -31,10 +31,17 @@ const animatedElement = document.querySelectorAll('.animated');
 const animatedElementArr = Array.from(animatedElement);
 
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('mouseover', () => {
   
   for(let i = 0; i < animatedElementArr.length; i++){
-    animatedElementArr[i].classList.add('showingElement');
+   
+    let result = distanceBetween(animatedElementArr[i]);
+    if(result){
+      animatedElementArr[i].classList.add('showingElement');
+    }else{
+      animatedElementArr[i].classList.remove('showingElement');
+    }
+
     }
     
 });

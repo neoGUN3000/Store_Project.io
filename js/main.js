@@ -1,9 +1,27 @@
 
 
-let nav_buttons = document.getElementsByName('scroll_btn');
+let gettingBtns = document.querySelectorAll('.side-nav__link');
 let pages = document.querySelectorAll('.page');
 let heading = document.querySelectorAll('.heading');
+const pagesArr = Array.from(pages)
 const headingArr = Array.from(heading);
+const nav_buttons = Array.from(gettingBtns);
+
+
+
+
+
+
+
+function anchor(){
+  for( let i = 0;  i < pagesArr.length; i++){
+ pagesArr[1].scrollIntoView({behavior : 'smooth'});
+
+  }
+}
+anchor();
+
+
 // называть множиство множиством 
 
 
@@ -97,11 +115,41 @@ function visiting_links(){
    
       if(sectionId){
         window.location.href = sectionId;
-        sectionId.scrollIntoView({behavior: 'smooth'});
-
-  
+       link.scrollIntoView({behavior: 'smooth'});
+        
       }
     })
   })
 }
-window.addEventListener('DOMContentLoaded', visiting_links());
+
+window.addEventListener('DOMContentLoaded', visiting_links);
+
+
+
+window.addEventListener('DOMContentLoaded', () =>{
+
+  function addingClassToLink(navIndex){
+    return navIndex.checked;
+  }
+  
+
+
+
+
+
+
+  for(let i = 0; i < nav_buttons.length; i++){
+    nav_buttons[i].addEventListener('click', () => {
+     let result = addingClassToLink(nav_buttons[i]);
+      if(result){
+        console.log(result);
+      }
+    });
+  }
+});
+
+
+
+
+
+

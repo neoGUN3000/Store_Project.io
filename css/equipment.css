@@ -1,0 +1,7 @@
+.equipment__page{
+    background-color:hwb(0 79% 21%);
+    min-width: 100dvw;
+}
+.equipment__page .heading{
+   color: rgb(100, 100, 100);
+}

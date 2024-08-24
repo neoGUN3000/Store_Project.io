@@ -1,3 +1,7 @@
 .to_reviews__page{
-    background-color: rgb(0, 0, 0);
+    background-color: black;
+}
+
+.to_reviews__page .heading{
+    color: var(--main-color-ofDesign);
 }

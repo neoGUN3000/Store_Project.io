@@ -1,3 +1,7 @@
 .to_gifts__page{
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(42, 42, 42);
+}
+
+.to_gifts__page .heading{
+    color: var(--main-color-ofDesign);
 }

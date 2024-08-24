@@ -1,7 +1,7 @@
 .make-oder__page{
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(170, 170, 170);
 }
 
 .make-oder__page .header {
-background-color:rgb(80, 80, 80);
+color: var(--main-color-ofDesign);
 }

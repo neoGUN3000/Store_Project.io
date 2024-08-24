@@ -22,8 +22,11 @@ body{
 }
 
 :root{
+    --main-color-ofDesign :#000;
+
+
     --primary-font: 'inter', sans-serif;
-    --font-color: rgb(1, 1, 54);
+    --font-color: rgb(43, 180, 15);
     --buttons-font: 'inter' , 'sans-serif';
     --special-text-color:springgreen;
     --letter-spacing:1.5px;
@@ -113,7 +116,7 @@ font-family: var(--primary-font);
     user-select: none;
 }
 .side-nav__list-row:hover .side-nav__link {
-    color: rgb(0, 0, 126);
+    color: var(--);
     -webkit-text-stroke: .1px rgb(155, 155, 255);
 }
 .heading{   
@@ -132,7 +135,7 @@ font-family: var(--primary-font);
 
 }
 .home__page .heading{
-  color:   rgb(0, 0, 0);
+  color: var(--main-color-ofDesign);
 }
 .chengeColor{
 color: aqua;
@@ -243,6 +246,7 @@ margin-top: 1%;
     width:100vw;
     height: 100vh; 
     margin: auto;
+    transition: .4s;
 }
 
 
@@ -517,7 +521,7 @@ transform: translateY(50%);
 
 
 
-
+.
 
 
 

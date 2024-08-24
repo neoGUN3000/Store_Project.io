@@ -1,3 +1,7 @@
 .to_delivery__page{
     background-color: rgb(83, 83, 83);
 }
+
+.to_delivery__page .heading{
+    color: var(--main-color-ofDesign);
+}

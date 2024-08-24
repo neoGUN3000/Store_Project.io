@@ -1,7 +1,7 @@
 .to_description__page{
-    background-color: rgb(99, 99, 99);
+    background-color: rgb(127, 127, 127);
 }
 .to_description__page .heading{
-    color:rgb(141, 141, 141);
+    color:var(--main-color-ofDesign);
     -webkit-text-stroke: .1px rgba(116, 116, 116, 0.178);
 }

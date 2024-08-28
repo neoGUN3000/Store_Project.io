@@ -1,35 +1,18 @@
 .equipment__page{
-   background-color:rgb(212, 212, 212) ;
+   background-color:var(--darkBlue) ;
     min-width: 100dvw;
+    
+    
 }
 .equipment__page .heading{
    color:var(--main-color-ofDesign);
+   height: min-content;
   
 }
 .heading__equipment-profitabele{
-    position: absolute;
-    top: 100px;
-
-
-
-    width: max-content;
     
+    text-align: center;
+    text-wrap: balance;
+
     font-size: calc(var(--responsive-fs) - 6px);
 }
-
-
-.grid-equipment{
-    
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(4, clamp(350px, 20vw, 500px));
-    grid-template-rows: clamp(300px, 40vh, 800px);
-    
-}
-.grid-equipmen__cage{
-    border: 2px solid red;
-}
-.adventages-of-product{
-    display: none;
-}
-

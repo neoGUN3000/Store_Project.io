@@ -16,85 +16,74 @@
     <title>Store</title>
 </head>
 <body>
-   
-    <!-- i want to add fixed element of hot line for making call along the web site -->
-    
+ 
             <header> 
-                <input type="checkbox" id="menu-opener">
-                <label for="menu-opener" class="menu-opener"><span>menu</span></label>
-                <nav class="side-nav">          
-                   <ul class="side-nav__list">
-                       
-                        <li class="side-nav__list-row">
-                            <a href="#home" class="side-nav__link" >
-                       <span> home</span>
-                            </a></li>
-                        <li class="side-nav__list-row">
-                            <a href="#equipment" class="side-nav__link" >
-                               
-                                <span>equipment</span>
-                            </a></li>
-                            <li class="side-nav__list-row">
-                                <a href="#make-oder" class="side-nav__link">
-                              <span>order</span>  
-                                </a></li>
-                        <li class="side-nav__list-row">
-                            <a href="#description" class="side-nav__link" >
-                            <span> description</span>
-
-                            </a></li>
-                            <li class="side-nav__list-row">
-                                <a href="#delivery" class="side-nav__link">
-                             <span>delivery</span>
-                                </a></li>
-                            <li class="side-nav__list-row">
-                                <a href="#gifts" class="side-nav__link">
-                                      <span> gifts</span>
-                                </a></li>
-                                <li class="side-nav__list-row">
-                                    <a href="#reviews" class="side-nav__link">
-                                       <span> reviews</span>
-                                        
-                                    </a></li>
-                                  
-                    </ul>
-    
-    
-                </nav>
+               
+                
+           
             </header>
           
    
  <main class="main">
 <section class="home__page page" id="home">
-    <h2 class="heading animated">home</h2>
-    <article class="introducing-product">
+    <section class="container--left">
 
-
-        <div class="ourProductIs">
-            <span class="sub-line"></span>
-            <h1>Электронная книга PocketBook 629 Verse</h1>
-            <span class="sub-line"></span>
-        </div>
+         <h2 class="heading animated">home</h2>
+         <h2 class="namingProduct--left">Электронная книга </h2>
+        <nav class="main-nav--left">    
+                    <input  type="radio" name="main-navigation" id="#r1" checked>
+                    <input  type="radio" name="main-navigation" id="#r2">
+                    <input  type="radio" name="main-navigation" id="#r4">
+                    <input  type="radio" name="main-navigation" id="#r3">
+                 
+                
+                        <label  class="r1 r"  for="#r1">home</label>
+                        <label  class="r2 r"  for="#r2">  equipment   </label>
+                        <label   class="r3 r" for="#r3">    oder </label>
+                        <label   class="r4 r" for="#r4">   description  </label>
+                       
+                </nav> 
+     
 
 
         <picture class="book-pic">
             <source srcset="img/book/H-S-634-K-WW-03.webp" media="(min-width: 800px)">
             <source  srcset="C:\Users\Alex\Desktop\Store\img\book\Без названия.jpg">
-            <img src="./img/book/http___s01.csdam.net_digitalcontent_0_5364_53640908.jpg_ev=1001.webp" alt="">
+            <img src="./img/book/http___s01.csdam.net_digitalcontent_0_5364_53640908.jpg_ev=1001.webp" alt="" width="300">
         </picture>
 
+        
+        <a href="#tell" class="get-started--left"> tel:0722725010</a>
+    </section>
 
-        <ul class="desc-list animated" >
+
+
+    <section class="container--right">
+       
+        <nav class="main-mav--right">
+            <input  type="radio" name="main-navigation" id="#r5">
+            <input  type="radio" name="main-navigation" id="#r6">
+            <input  type="radio" name="main-navigation" id="#r7">
+
+            <label  class="r5 r" for="#r5">   delivery  </label>
+            <label  class="r6 r" for="#r6">    gifts</label>
+            <label   class="r7 r" for="#r7">    reviews  </label>
+        </nav>
+
+
+        <h1 class="namingProduct--right">PocketBook 629 Verse</h1>
+        
+        <ul class="desc-list " >
             <li class="desc-list__row">скидка 30%</li>
             <li class="desc-list__row">быстрая доставка </li>
             <li class="desc-list__row">лёгок в использовании</li>
             <li class="desc-list__row">Комфортный способ оплаты</li>
         </ul>
-         <div class="home-page__bts-getStart_wrapper  ">
-             <a href="#make-oder" class="get-started"> заказать онлайн <img src="./img/icons/book.svg" alt="icon-btn" width="25"> </a>
-         </div>
         
-    </article>
+      
+            <a href="#make-oder" class="get-started--right"> заказать сейчас</a>
+        
+</section>
 
    
 </section>
@@ -103,12 +92,20 @@
 <section class="equipment__page page" id="equipment">
     <header class="heading animated" >
         <h2 title="my-equipment">equipment</h2>
-        <h3 class="heading__equipment-profitabele"> Всё для чтения — в одном месте. Сделайте заказ сейчас и получите устройство с готовой библиотекой!</h3>
     </header>
     <section class="adventages-of-product">
         <ul class="grid-equipment">
-            <li class="grid-equipmen__cage"></li>
-            <li class="grid-equipmen__cage"></li>
+            <li class="grid-equipmen__cage">
+                <!-- <img src="./img/book/http___s01.csdam.net_digitalcontent_0_5364_53640908.jpg_ev=1001.webp" alt="">
+                <div class="title">
+                    <h4>product1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, est!</p> -->
+
+                </div>
+                <button type="button">get oder</button>
+            </li>
+            <li class="grid-equipmen__cage"><h3 class="heading__equipment-profitabele"> Всё для чтения — в одном месте. Сделайте заказ сейчас и получите устройство с библиотекой!</h3></li>
+            
             <li class="grid-equipmen__cage"></li>
             <li class="grid-equipmen__cage"></li>
         </ul>

@@ -1,18 +1,13 @@
 .equipment__page{
    background-color:var(--darkBlue) ;
-    min-width: 100dvw;
-    
+    min-width: 100dvw; height: 101vh;
+    transform: translateZ(50px);
+
     
 }
-.equipment__page .heading{
-   color:var(--main-color-ofDesign);
-   height: min-content;
-  
-}
+
 .heading__equipment-profitabele{
-    
     text-align: center;
     text-wrap: balance;
-
     font-size: calc(var(--responsive-fs) - 6px);
 }

@@ -1,9 +1,9 @@
 
-
 const btnLabel = Array.from(document.querySelectorAll('.r'));
 const pages = Array.from(document.querySelectorAll('.page'));
 const headingArr = Array.from( document.querySelectorAll('.heading'));
 const nav_buttons = Array.from(document.getElementsByName('main-navigation'));
+
 
 
 const scrollingPage = (e) =>{
@@ -21,7 +21,8 @@ if(nav_buttons[i].checked){
           btnLabel[i].classList.remove('colorGiver');
           } 
 
-  }  
+          
+        }
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{

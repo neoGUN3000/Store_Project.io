@@ -1,6 +1,7 @@
 
 @import url('./heading.css');
 @import url('./animated.css');
+@import url('./anchor.css');
 
 @font-face {
     font-family: inter;
@@ -22,7 +23,6 @@ body{
 }
 /* .main::-webkit-scrollbar{
 background-color: var(--darkBlue);
-
 }
 .main::-webkit-scrollbar-thumb{
 background-color: var(--lightBlue);
@@ -206,15 +206,16 @@ left nav bar _______________________________________*/
 
 .main-nav--left{
     position: fixed;
-    z-index:999;
-    margin-right:5px;
+    z-index:999;top: 10px;
+    margin-right:10px;
     display:flex;
     column-gap: 20px;
+    color: var(--darkBlue);
     }
     .main-mav--right{
         position: fixed;
-    z-index:999;
-    margin-left: 5px;
+    z-index:999;top: 10px;
+    margin-left: 10px;
     display:flex;
     column-gap: 20px;
     align-self: start;
@@ -228,35 +229,79 @@ left nav bar _______________________________________*/
 
 .namingProduct--left{
 position: absolute;
-top: 10vh;
+top: 60px;padding: 10px 20px;
+margin-right:0px;
+
+
+
+
 font-size: calc(var(--responsive-fs) + 5px);
 font-weight: 500;
-margin-right:5px;
+text-wrap: nowrap;
+
+
 color: var(--darkBlue);
-    text-wrap: nowrap;
+border: 2px solid var(--darkBlue) ;
+    border-right:none;
+    border-radius:20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: none;
 }
 
 .namingProduct--right{
     position: absolute;
-    top: 10vh;
+    top: 50px;padding: 10px 20px;
+    left: -10px;
+
     font-size: calc(var(--responsive-fs) + 5px);
     font-weight: 500;
-    margin-left: 5px;
-    color: var(--white-mix);
     text-wrap: nowrap;
+    
+    
+    color: var(--white-mix);
+    border: 2px solid  var(--white-mix);
+    border-left:none;
+    border-radius:20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: none;
+    border-bottom-right-radius: 0;
 }
 
-
-
-
-
-
-
-.book-pic{
+.namingProduct--left::before{
+    content: url(../img/icons/chevron-down-svgrepo-com.svg);
     position: absolute;
-    top:50vh;
-    transform: translateY(-50%);
+    left: -21px;bottom: -20px;
 }
+.namingProduct--right::after{
+   content: url(../img/icons/chevron-down-svgrepo-com\ copy.svg);
+   position: absolute;
+   right: -21px;bottom: -20px;
+
+ 
+    
+}
+
+
+
+
+.video-pic {
+    background-color: transparent;
+    width: clamp(300px, 29vw, 600px); 
+  height: clamp(300px, 29vw, 500px);
+    position: absolute;
+    top: 50vh;left:50%;
+    transform: translate(-50%, -50%);
+ 
+    
+}
+.video-pic video{
+    width: inherit;
+    aspect-ratio: 1/1;
+}
+
 
 .desc-list{
     width: clamp(300px, 35vw, 600px);height: 350px;
@@ -266,7 +311,7 @@ color: var(--darkBlue);
 
 
   position: absolute;
-  top:50vh;left: -5px;
+  top:50vh;left: -10px;
   transform: translateY(-50%);
 
 
@@ -302,7 +347,7 @@ color: var(--darkBlue);
 
 .get-started--left{
     position:absolute ;
-    top:calc(300px + 40vh   );
+    top:80vh;
 
     display: flex;
     align-items: center;
@@ -311,16 +356,16 @@ color: var(--darkBlue);
     color: var(--white-mix); 
     border-top-left-radius:20px ;
     border-bottom-left-radius:20px ;
-    
+
     
     height: 50px;width: max-content;
     padding: 10px;
 
-
+    margin-top: 10px;
 }
 .get-started--right{
     position:absolute ;
-    top:calc(300px + 40vh   ); left: -5px;
+    top:80vh; left: -10px;
 
     display: flex;
     align-items: center;
@@ -366,7 +411,7 @@ color: var(--darkBlue);
     z-index: -1;
 }   
 
-.r{
+.r/*radiobtn*/{
     font-size: calc(16px + .4%);
     text-transform: uppercase;
     font-weight: 600;
@@ -381,6 +426,9 @@ color: var(--darkBlue);
     color: var(--lightBlue);
     
 }    
+.colorGiverBlackBlue{
+    color: var(--darkBlue);
+}
 
 .r:active{
     color: rgb(0, 225, 255);

@@ -1,7 +1,7 @@
 .heading {
-    position: absolute;
+    position: relative;
     top: 50%;transform: translateY(-50%);
-    left: 0;
+    left: -100px;
     height: 350px;width: 40px;
     border-top-right-radius:20px ;
     border-bottom-right-radius:20px ;
@@ -9,6 +9,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: var(--responsive-fs);
+    transition: .4s;
 }
 .heading:nth-child(1){
     color: var(--white-mix);
@@ -32,4 +33,7 @@
 }
 .heading:nth-child(7){
     color: var(--white-mix);
+}
+.page:hover .heading{
+left: 0;
 }

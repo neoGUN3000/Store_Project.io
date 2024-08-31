@@ -14,27 +14,31 @@ pages[e].scrollIntoView({behavior: 'smooth'});
 
 const selectedBtn = ()=>{
 for (let i = 0; i < nav_buttons.length; i++) {
-if(nav_buttons[i].checked){
-    btnLabel[i].classList.add('colorGiver');
+if(nav_buttons[i].checked && i < 4){
+  btnLabel[i].classList.add('colorGiver');
     scrollingPage(i);
-     } else{
-          btnLabel[i].classList.remove('colorGiver');
-          } 
+     } if(nav_buttons[i].checked && i > 3){
+      btnLabel[i].classList.add('colorGiverBlackBlue');
+      scrollingPage(i);
+     }
+     
+     
+    if(!nav_buttons[i].checked){
+      btnLabel[i].classList.remove('colorGiverBlackBlue');
+      btnLabel[i].classList.remove('colorGiver');
+    } 
 
           
         }
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
+
   btnLabel[0].classList.add('colorGiver');
   for(let i = 0; i < nav_buttons.length;i++){
     nav_buttons[i].addEventListener('click', selectedBtn);
   }
 });
-
-
-
-
 
 
 
@@ -56,23 +60,12 @@ const animatedElementArr = Array.from(document.querySelectorAll('.animated'));
 
 
 window.addEventListener('mouseover', () => {
-  
-  for(let i = 0; i < animatedElementArr.length; i++){
-   
-    let result = distanceBetween(animatedElementArr[i]);
-    if(result){
-      animatedElementArr[i].classList.add('showingElement');
-    }else{
-      animatedElementArr[i].classList.remove('showingElement');
-    }
-   
+  let result = distanceBetween(pages[1]);
+  let anchor = document.querySelector('.anchor');
+if(result){
+anchor.classList.add('shower');
+}else{anchor.classList.remove('shower');}
 
-
-    }
-
-
-
- 
     
 });
 

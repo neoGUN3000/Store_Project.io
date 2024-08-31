@@ -1,0 +1,26 @@
+.anchor{
+    width: 70px;
+    aspect-ratio: 1;
+    display: inline-block;
+    background-color: red;
+    position: absolute;
+    z-index: 999;
+    border-radius: 30px;
+    bottom: 5vh;right: 5vw;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: .5s ;
+    
+}
+.anchor img{
+    transform:rotate(180deg);
+}
+.shower{
+    opacity: 1;
+    z-index: 999;
+    visibility: visible;
+
+}

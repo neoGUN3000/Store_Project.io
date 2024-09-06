@@ -3,7 +3,7 @@ const btnLabel = Array.from(document.querySelectorAll('.r'));
 const pages = Array.from(document.querySelectorAll('.page'));
 const headingArr = Array.from( document.querySelectorAll('.heading'));
 const nav_buttons = Array.from(document.getElementsByName('main-navigation'));
-
+pages[1].scrollIntoView({behavior: 'smooth'});
 
 
 const scrollingPage = (e) =>{

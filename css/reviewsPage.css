@@ -1,7 +1,108 @@
+
+
 .to_reviews__page{
-    background-color: black;
+   display: flex;
+   justify-content: space-between;
+    padding: 10px;
+}
+.rewiews__card{
+    width: 350px;
+    height: clamp(400px, 90vh, 500px);
+    display: flex;  
+    position: relative;
+    left: -20px;
+    flex-direction: column;
+    background-color: var(--darkBlue);
+    border-radius: 20px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    box-shadow: 0 0 10px rgba(0, 0, 139, 0.76);
+}
+.product-img__wrapper{
+width: 100%;height: 260px;
+z-index: 0;
+position: relative;
+overflow: hidden;
+border-radius: inherit;
+border-bottom-right-radius: 0%;
+
+}
+.product__img{
+z-index: 0;
+border-radius: inherit;
+}
+.product__covering{
+    display: inline-block;
+    width: 100%; height: inherit;
+    position: absolute;
+    bottom: 0;right:0;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.267), var(--darkBlue));
+ 
 }
 
-.to_reviews__page .heading{
-    color: var(--main-color-ofDesign);
+.advantages_product{
 }
+
+
+
+
+
+
+
+
+.review-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.review-cards{
+display:flex; flex-direction: column;
+row-gap: 20px;
+ border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+.review-card{
+display: flex;
+width:clamp(500px, 50vw, 800px );height: clamp(200px, 20vh, 450px);
+justify-content: center; align-items: center;
+background-color: darkblue;
+position: relative;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+
+}
+.card-img__wrapper{
+    width: 100px;
+    position: absolute;
+    left: 0%;top: 50%;
+    transform: translate(-50%, -50%);
+   overflow: hidden;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   
+}
+.review-cards__title{
+    overflow-y: auto;
+    width: 75%;height: 90%;
+    align-self: center;
+    font-size: 12px;
+    color: rgb(0, 195, 255);
+    font-size: 16px;display: flex;
+    align-items: center;
+}
+.review-cards__title p{
+
+   font-size: calc(6px + .5vw);
+    -webkit-text-stroke: .4px rgb(0, 247, 255);
+    padding: 10px 0; 
+}
+.review-cards__title::-webkit-scrollbar{
+    background-color: transparent;
+   width: calc(1px + .1vw);
+
+}
+.review-cards__title::-webkit-scrollbar-thumb{
+background-color: aqua;
+display: inline-block;
+}
+

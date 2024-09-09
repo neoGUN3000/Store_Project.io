@@ -1,1 +1,20 @@
- 
+.heading{
+    display: flex;
+    align-items: center;justify-content: center;
+    flex-direction: row-reverse;
+    
+    font-weight: 600;font-size: 18px;
+    width: 150px;height: min-content;
+    
+    
+    text-transform: uppercase;
+    background-color: blue;
+    padding:0 10px;
+    color: var(--white-mix);
+
+
+    border-bottom-right-radius: 20px;
+}
+.heading svg{
+    margin-right:5px ;
+}

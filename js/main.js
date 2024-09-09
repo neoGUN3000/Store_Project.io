@@ -3,7 +3,10 @@ const btnLabel = Array.from(document.querySelectorAll('.r'));
 const pages = Array.from(document.querySelectorAll('.page'));
 const headingArr = Array.from( document.querySelectorAll('.heading'));
 const nav_buttons = Array.from(document.getElementsByName('main-navigation'));
-pages[1].scrollIntoView({behavior: 'smooth'});
+
+// pages[0].scrollIntoView({behavior: 'smooth'});
+// document.querySelector('#im-special').scrollIntoView({behavior: 'smooth'});
+
 
 
 const scrollingPage = (e) =>{
@@ -56,7 +59,20 @@ function distanceBetween (element){
 }
 
 
-const animatedElementArr = Array.from(document.querySelectorAll('.animated'));
+const animatedElementsArr = Array.from(document.querySelectorAll('.animated'));
+console.log(animatedElementsArr);
+
+
+
+window.addEventListener('mouseover', ()=>{
+for(let i = 0; i < animatedElementsArr.length; i++){
+  let result = distanceBetween(animatedElementsArr[i]);
+  if(result){
+    animatedElementsArr[i].classList.add('showingElement');
+  }
+}
+} );
+
 
 
 window.addEventListener('mouseover', () => {
@@ -68,6 +84,24 @@ anchor.classList.add('shower');
 
     
 });
+
+
+
+document.addEventListener('', ()=>{
+  let positionTrigger = document.querySelector('#im-special');
+  const ifElementIntoView = (e) =>{
+    let isIntoView = distanceBetween(e);
+    return isIntoView 
+  }
+ const result =  ifElementIntoView(positionTrigger);
+ let toFixElement = document.querySelector('.container--right');
+if(result){
+toFixElement.style.position = 'static';
+}else toFixElement.style.position = 'fixed';;
+
+
+})
+// this program makes fixed or static position for any containers dependencly on scroll 
 
 
 

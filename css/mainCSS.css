@@ -15,7 +15,7 @@
 
 body{
     font-family: var(--primary-font);
-    overflow: hidden;
+ 
     scroll-behavior: smooth;
 
     
@@ -60,10 +60,10 @@ background-color: var(--lightBlue);
 }
 .page{
     scroll-behavior: smooth;
-    
     width:100vw;
     height: 100vh; 
     transition: .4s;
+   
 }
 
 
@@ -165,10 +165,10 @@ left nav bar _______________________________________*/
 
 
 .home__page{
-    overflow: hidden;
+
     display: flex;
    z-index: -10;
-   
+ 
 }
 
 
@@ -182,9 +182,8 @@ left nav bar _______________________________________*/
     display: flex;
     flex-direction: column;
     align-items: end;
-    position: relative;
     transform: translateZ(-10px);
-   
+
 }
 .container--right{
     width: 40vw;height: 100vh;
@@ -192,28 +191,27 @@ left nav bar _______________________________________*/
     box-shadow: 0 0 10px var(--darkBlue);
     display: inline-flex;
     flex-direction: row;
-    position: relative;
     align-items: center;
     transform: translateZ(-10px);
+
 }
 
 
 
 
 
-
-
-
 .main-nav--left{
-    position: fixed;
-    z-index:999;top: 10px;
+    height: 20px; width: 400px;
+    background-color: aqua;
+    z-index:999;
     margin-right:10px;
     display:flex;
     column-gap: 20px;
     color: var(--darkBlue);
     }
     .main-mav--right{
-        position: fixed;
+        height: 20px; width: 250px;
+        background-color: aqua;
     z-index:999;top: 10px;
     margin-left: 10px;
     display:flex;
@@ -229,60 +227,30 @@ left nav bar _______________________________________*/
 
 .namingProduct--left{
 position: absolute;
-top: 60px;padding: 10px 20px;
+top: 30px;padding: 10px 20px;
 margin-right:0px;
-
-
-
-
 font-size: calc(var(--responsive-fs) + 5px);
 font-weight: 500;
 text-wrap: nowrap;
 
 
 color: var(--darkBlue);
-border: 2px solid var(--darkBlue) ;
-    border-right:none;
-    border-radius:20px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom: none;
+z-index: 20;
+
 }
 
 .namingProduct--right{
     position: absolute;
-    top: 50px;padding: 10px 20px;
+    top: 30px;padding: 10px 20px;
     left: -10px;
-
     font-size: calc(var(--responsive-fs) + 5px);
     font-weight: 500;
     text-wrap: nowrap;
-    
-    
     color: var(--white-mix);
-    border: 2px solid  var(--white-mix);
-    border-left:none;
-    border-radius:20px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom: none;
-    border-bottom-right-radius: 0;
+    z-index: 20;
+
 }
 
-.namingProduct--left::before{
-    content: url(../img/icons/chevron-down-svgrepo-com.svg);
-    position: absolute;
-    left: -21px;bottom: -20px;
-}
-.namingProduct--right::after{
-   content: url(../img/icons/chevron-down-svgrepo-com\ copy.svg);
-   position: absolute;
-   right: -21px;bottom: -20px;
-
- 
-    
-}
 
 
 
@@ -290,11 +258,11 @@ border: 2px solid var(--darkBlue) ;
 .video-pic {
     background-color: transparent;
     width: clamp(300px, 29vw, 600px); 
-  height: clamp(300px, 29vw, 500px);
+    height: clamp(300px, 25vw, 400px);
     position: absolute;
-    top: 50vh;left:50%;
+    top: 50vh;left:20%;
     transform: translate(-50%, -50%);
- 
+    z-index: 0;
     
 }
 .video-pic video{
@@ -304,33 +272,56 @@ border: 2px solid var(--darkBlue) ;
 
 
 .desc-list{
-    width: clamp(300px, 35vw, 600px);height: 350px;
+    width: 100%;height:60%;
     display: flex;flex-direction: column;
-    justify-content: space-evenly;
+    row-gap: 10px; 
+
+    justify-content: center;
 
 
 
   position: absolute;
-  top:50vh;left: -10px;
+  top: 50vh;left: 0px;
   transform: translateY(-50%);
 
 
 
-    list-style: none;
     background-color: var(--darkBlue);
-    border-top-right-radius:20px ;
-    border-bottom-right-radius:20px ;
-    border: 1px solid lightseagreen;
+    border: 1.5px solid lightseagreen;
+    border-right-width: 13px;
     border-left: none;
     padding-right: 4vw;
 
 }
 .desc-list li{
-  font-size: var(--responsive-fs);
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--white-mix);
-  margin-left: 5px;
+   
+    height: auto;
+     font-size: calc(var(--responsive-fs) - 6px);
+     color: var(--white-mix);
+     position: relative;
+    top: 20px;
+    margin-left: 35px;
+}
+.desc-list li:is(:last-child, :nth-child(4) ){
+    top: 15px;
+}
+.desc-list li::before{
+    content: '';
+    display: inline-block;
+    width: 20px;aspect-ratio: 1;
+    background-color: red;
+    left: -25px;
+    position: absolute;
+
+}
+
+.product-icon{
+    position: absolute;
+    top: 25vh;left: 0;
+    width: 100%;
+    display: flex;justify-content: center;
+    z-index: 1000;
+    transform: scale(2);
 }
 
 
@@ -340,45 +331,54 @@ border: 2px solid var(--darkBlue) ;
 
 
 
-
-
-
-
+.btn-wrapper{
+    position: absolute;
+    left: 0;right: 0;
+    width: 100%;
+    bottom: 10%;
+ 
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    
+}
 
 .get-started--left{
-    position:absolute ;
-    top:80vh;
-
+    
+ 
+    width: 50%;
     display: flex;
     align-items: center;
 
     background-color:var(--darkBlue);
     color: var(--white-mix); 
-    border-top-left-radius:20px ;
-    border-bottom-left-radius:20px ;
+
 
     
-    height: 50px;width: max-content;
+    
+    height: 50px;width: 50%;
     padding: 10px;
 
-    margin-top: 10px;
+    border: 1px solid rgb(0, 247, 255);
+    border-top: none;
+    transition: .3s;
 }
 .get-started--right{
-    position:absolute ;
-    top:80vh; left: -10px;
 
+    margin-right: 15px;
+    
     display: flex;
     align-items: center;
 
     background-color: var(--white-mix);
     color: var(--darkBlue);
-    border-bottom-right-radius:20px ;
-    border-top-right-radius:20px ;
 
        
+    
     height: 50px;width: max-content;
     padding: 10px;
     font-weight: 600;
+    transition: .3s;
     
 }
 :is(.get-started--left, .get-started--right) :where(span){
@@ -386,7 +386,13 @@ border: 2px solid var(--darkBlue) ;
  text-transform: uppercase;
  text-wrap: nowrap;
 }
-
+.get-started--right:hover{
+  box-shadow: 0 0 5px var(--white-mix);
+}
+.get-started--left:hover{
+    box-shadow:inset  0 0 10px 1px var(--lightBlue);
+    background-color: rgb(0, 0, 221);
+}
 
 
 

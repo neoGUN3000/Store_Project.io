@@ -4,8 +4,8 @@ const pages = Array.from(document.querySelectorAll('.page'));
 const headingArr = Array.from( document.querySelectorAll('.heading'));
 const nav_buttons = Array.from(document.getElementsByName('main-navigation'));
 
-// pages[0].scrollIntoView({behavior: 'smooth'});
-// document.querySelector('#im-special').scrollIntoView({behavior: 'smooth'});
+// pages[1].scrollIntoView({behavior: 'smooth'});
+
 
 
 
@@ -17,20 +17,24 @@ pages[e].scrollIntoView({behavior: 'smooth'});
 
 const selectedBtn = ()=>{
 for (let i = 0; i < nav_buttons.length; i++) {
-if(nav_buttons[i].checked && i < 4){
+if(nav_buttons[i].checked){
   btnLabel[i].classList.add('colorGiver');
-    scrollingPage(i);
-     } if(nav_buttons[i].checked && i > 3){
+  
+   
+   
+     } if(nav_buttons[i].checked  &&  sidePosition(btnLabel[i])){
+      btnLabel[i].classList.add('colorGiverRightSide');
+      scrollingPage(i);
+      
+     }if(nav_buttons[i].checked || !sidePosition(btnLabel[i])){
       btnLabel[i].classList.add('colorGiverBlackBlue');
       scrollingPage(i);
+      
+     }if(!nav_buttons[i].checked){
+      btnLabel[i].classList.remove('colorGiverBlackBlue');
+      btnLabel[i].classList.remove('colorGiverRightSide');
      }
      
-     
-    if(!nav_buttons[i].checked){
-      btnLabel[i].classList.remove('colorGiverBlackBlue');
-      btnLabel[i].classList.remove('colorGiver');
-    } 
-
           
         }
 }
@@ -54,13 +58,11 @@ function distanceBetween (element){
   const gettingElement = element.getBoundingClientRect();
   const windHieght = window.innerHeight;
   return gettingElement.top < windHieght;
-
-
 }
 
 
 const animatedElementsArr = Array.from(document.querySelectorAll('.animated'));
-console.log(animatedElementsArr);
+
 
 
 
@@ -104,7 +106,21 @@ toFixElement.style.position = 'static';
 // this program makes fixed or static position for any containers dependencly on scroll 
 
 
+const sidePosition = (element) =>{
+  let windowWidth = window.innerWidth;
+  let precentage = 60;
+  let elementPosition = element.getBoundingClientRect();
+  let item = element;
+ 
+  
 
+   if(elementPosition.left > (precentage / 100) * windowWidth){
+   return true;
+   }else  return false;
+ 
+
+  
+}
 
 
 

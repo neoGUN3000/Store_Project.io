@@ -56,7 +56,7 @@ background-color: var(--lightBlue);
     overflow-y:scroll;
     overflow-x:hidden;
     scroll-behavior: smooth;
-    perspective-origin: 100px;
+    
 }
 .page{
     scroll-behavior: smooth;
@@ -182,74 +182,54 @@ left nav bar _______________________________________*/
     display: flex;
     flex-direction: column;
     align-items: end;
-    transform: translateZ(-10px);
+    position: relative;
 
 }
 .container--right{
     width: 40vw;height: 100vh;
-    background-color:var(--lightBlue);
-    box-shadow: 0 0 10px var(--darkBlue);
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    transform: translateZ(-10px);
-
+    background: linear-gradient(60deg, rgb(51, 92, 228) 0%, rgb(1, 0, 56) 100%);
+    box-shadow: 0 0 5px var(--darkBlue);
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    justify-items: start;
+    position: relative;
+  
 }
 
 
 
 
 
-.main-nav--left{
-    height: 20px; width: 400px;
-    background-color: aqua;
-    z-index:999;
-    margin-right:10px;
-    display:flex;
-    column-gap: 20px;
-    color: var(--darkBlue);
-    }
-    .main-mav--right{
-        height: 20px; width: 250px;
-        background-color: aqua;
-    z-index:999;top: 10px;
-    margin-left: 10px;
-    display:flex;
-    column-gap: 20px;
-    align-self: start;
-    }
-    
-    
-    
-    
+
+
 
 
 
 .namingProduct--left{
 position: absolute;
-top: 30px;padding: 10px 20px;
+top: 30px;padding: 10px 10px;
 margin-right:0px;
 font-size: calc(var(--responsive-fs) + 5px);
 font-weight: 500;
 text-wrap: nowrap;
-
-
 color: var(--darkBlue);
 z-index: 20;
 
 }
 
 .namingProduct--right{
-    position: absolute;
-    top: 30px;padding: 10px 20px;
-    left: -10px;
     font-size: calc(var(--responsive-fs) + 5px);
     font-weight: 500;
     text-wrap: nowrap;
     color: var(--white-mix);
     z-index: 20;
-
+    position: absolute;
+    top: 30px;
+    padding: 10px 10px;
 }
+
+
 
 
 
@@ -279,17 +259,14 @@ z-index: 20;
     justify-content: center;
 
 
-
   position: absolute;
   top: 50vh;left: 0px;
   transform: translateY(-50%);
 
 
 
-    background-color: var(--darkBlue);
-    border: 1.5px solid lightseagreen;
-    border-right-width: 13px;
-    border-left: none;
+    background-color: transparent;
+ 
     padding-right: 4vw;
 
 }
@@ -333,51 +310,52 @@ z-index: 20;
 
 .btn-wrapper{
     position: absolute;
-    left: 0;right: 0;
-    width: 100%;
-    bottom: 10%;
- 
+   
+    
+    width:100%; 
+    bottom: 0;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
+    display: flex; flex-direction: column-reverse;
+    align-items: center;
+    
     
 }
 
 .get-started--left{
     
  
-    width: 50%;
+   
     display: flex;
     align-items: center;
-
+   
     background-color:var(--darkBlue);
     color: var(--white-mix); 
+    justify-content: start;
 
 
     
     
-    height: 50px;width: 50%;
+    height: clamp(40px, 10vh, 50px);width: clamp(50px, 60%, 500px);
     padding: 10px;
-
-    border: 1px solid rgb(0, 247, 255);
-    border-top: none;
     transition: .3s;
 }
 .get-started--right{
 
-    margin-right: 15px;
+    
     
     display: flex;
     align-items: center;
-
+    justify-content: start;
+    flex-direction: row-reverse;
     background-color: var(--white-mix);
     color: var(--darkBlue);
-
+    column-gap: 5px;
        
     
-    height: 50px;width: max-content;
+    height: clamp(40px, 10vh, 50px);width: clamp(50px, 60%, 500px);
     padding: 10px;
     font-weight: 600;
+
     transition: .3s;
     
 }
@@ -385,6 +363,7 @@ z-index: 20;
  font-size: calc(var(--responsive-fs) - 5px);
  text-transform: uppercase;
  text-wrap: nowrap;
+
 }
 .get-started--right:hover{
   box-shadow: 0 0 5px var(--white-mix);
@@ -401,16 +380,25 @@ z-index: 20;
 
 
 
+.main__nav{
+    height: 20px; width:;
+    background-color: transparent;
+    z-index:999;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-24%);
+    display:flex;
+    column-gap: 20px;
+    color: var(--darkBlue);
+    
+
+    }
+   
 
 
-:is(.r5, .r6, .r7){
-    color:var(--white-mix) ;
-}
-:is(.r1, .r2, .r3, .r4){
 
-}
 
-:is(.container--right, .container--left) input{
+.main__nav input{
     position: absolute;
     opacity: 0;
     visibility: hidden;
@@ -428,12 +416,12 @@ z-index: 20;
 
   
 
-.colorGiver{
-    color: var(--lightBlue);
-    
-}    
+  
 .colorGiverBlackBlue{
-    color: var(--darkBlue);
+    color:rgb(0, 255, 76);
+}
+.colorGiverRightSide{
+    color: aliceblue;
 }
 
 .r:active{

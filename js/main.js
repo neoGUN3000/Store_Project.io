@@ -1,5 +1,5 @@
 
-const btnLabel = Array.from(document.querySelectorAll('.r'));
+const btnLabel = Array.from(document.querySelectorAll('.nav__link '));
 const pages = Array.from(document.querySelectorAll('.page'));
 const headingArr = Array.from( document.querySelectorAll('.heading'));
 const nav_buttons = Array.from(document.getElementsByName('main-navigation'));
@@ -16,21 +16,21 @@ pages[e].scrollIntoView({behavior: 'smooth'});
 
 
 const selectedBtn = ()=>{
-for (let i = 0; i < nav_buttons.length; i++) {
-if(nav_buttons[i].checked){
+for (let i = 0; i < btnLabel.length; i++) {
+if(btnLabel[i].checked){
   btnLabel[i].classList.add('colorGiver');
   
    
    
-     } if(nav_buttons[i].checked  &&  sidePosition(btnLabel[i])){
+     } if(btnLabel[i].checked  &&  sidePosition(btnLabel[i])){
       btnLabel[i].classList.add('colorGiverRightSide');
       scrollingPage(i);
       
-     }if(nav_buttons[i].checked || !sidePosition(btnLabel[i])){
+     }if(btnLabel[i].checked || !sidePosition(btnLabel[i])){
       btnLabel[i].classList.add('colorGiverBlackBlue');
       scrollingPage(i);
       
-     }if(!nav_buttons[i].checked){
+     }if(!btnLabel[i].checked){
       btnLabel[i].classList.remove('colorGiverBlackBlue');
       btnLabel[i].classList.remove('colorGiverRightSide');
      }

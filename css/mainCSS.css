@@ -33,9 +33,9 @@ background-color: var(--lightBlue);
     --lightBlue: rgb(0, 68, 255);
     --white-mix: aliceblue;
     --primary-font: 'inter', sans-serif;
-    --font-color: rgb(43, 180, 15);
+   
     --buttons-font: 'inter' , 'sans-serif';
-    --special-text-color:springgreen;
+    --special-color:rgb(113, 255, 70);
     --letter-spacing:1.5px;
     --regular-blur:blur(10px);
     --cage-hight:41px;
@@ -187,14 +187,14 @@ left nav bar _______________________________________*/
 }
 .container--right{
     width: 40vw;height: 100vh;
-    background: linear-gradient(60deg, rgb(51, 92, 228) 0%, rgb(1, 0, 56) 100%);
+    background: linear-gradient(0deg, rgb(51, 92, 228) 0%, rgb(1, 0, 56) 100%);
     box-shadow: 0 0 5px var(--darkBlue);
     display: flex;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:space-evenly;
     justify-items: start;
     position: relative;
-  
+    row-gap: 20%;
 }
 
 
@@ -208,14 +208,14 @@ left nav bar _______________________________________*/
 
 .namingProduct--left{
 position: absolute;
-top: 30px;padding: 10px 10px;
+top: 60px;padding: 10px 10px;
 margin-right:0px;
 font-size: calc(var(--responsive-fs) + 5px);
 font-weight: 500;
 text-wrap: nowrap;
 color: var(--darkBlue);
 z-index: 20;
-
+cursor: pointer;
 }
 
 .namingProduct--right{
@@ -225,8 +225,9 @@ z-index: 20;
     color: var(--white-mix);
     z-index: 20;
     position: absolute;
-    top: 30px;
+    top: 60px;
     padding: 10px 10px;
+   cursor: pointer;
 }
 
 
@@ -292,86 +293,121 @@ z-index: 20;
 
 }
 
+
 .product-icon{
-    position: absolute;
-    top: 25vh;left: 0;
-    width: 100%;
+    position: relative;
+    margin: auto;
+    bottom: 10vh;
+    width: clamp(20px, 3vw, 200px);
     display: flex;justify-content: center;
     z-index: 1000;
     transform: scale(2);
 }
-
-
-
-
-
-
-
-
-.btn-wrapper{
+.svg__inner{
     position: absolute;
-   
-    
-    width:100%; 
-    bottom: 0;
-    z-index: 1000;
-    display: flex; flex-direction: column-reverse;
-    align-items: center;
-    
-    
+    width: clamp(10px, 1.5vw, 190px);
+    right: 50%;top: 50%;transform: translate(50%,-50%);
 }
 
-.get-started--left{
-    
- 
-   
+
+
+
+
+
+
+
+
+
+
+
+.get-started{
+    position: relative;
+    bottom: 20%;
+
+
+
+    align-self: center;
     display: flex;
     align-items: center;
-   
-    background-color:var(--darkBlue);
-    color: var(--white-mix); 
-    justify-content: start;
-
-
-    
-    
-    height: clamp(40px, 10vh, 50px);width: clamp(50px, 60%, 500px);
-    padding: 10px;
-    transition: .3s;
-}
-.get-started--right{
-
-    
-    
-    display: flex;
-    align-items: center;
-    justify-content: start;
+    justify-content: center;
     flex-direction: row-reverse;
+    column-gap: 5px;
+    
+    
+    
     background-color: var(--white-mix);
     color: var(--darkBlue);
-    column-gap: 5px;
-       
-    
-    height: clamp(40px, 10vh, 50px);width: clamp(50px, 60%, 500px);
-    padding: 10px;
+    padding:10px 25px;
     font-weight: 600;
-
+    font-size: calc(16px + .4%);
+    text-transform: uppercase;
+    
     transition: .3s;
+    z-index: 999;
+
+ 
+}
+
+.get-started::after{
+    content: '';
+    display: inline-block;
+    width: 100%;height: 100%;
+    
+    position: absolute;
+    transform: translate(10px, 10px);
+
+
+    border: 2px solid var(--darkBlue);
+    border-top: none;
+    border-left: none;
+    background-color: transparent;
+
+    transition: .2s;
+    
     
 }
-:is(.get-started--left, .get-started--right) :where(span){
- font-size: calc(var(--responsive-fs) - 5px);
- text-transform: uppercase;
- text-wrap: nowrap;
+.get-started::before{
+    content: '';
+    display: inline-block;
+    width: 100%;height: 100%;
+    
+    position: absolute;
+    transform: translate(-10px, -10px);
+
+
+    border: 2px solid var(--darkBlue);
+    border-bottom: none;
+    border-right:none;
+    background-color: transparent;
+    transition: .2s;
+
+
+    
+}
+.get-started:hover::after {
+    transform: translate(0px, 0px);
+    border-radius:5px;
+}
+.get-started:hover::before {
+    transform: translate(0px, 0px);
+    border-radius:5px;
+}
+.get-started:hover{
+    border-radius: 5px;
+}
+
+
+.get-started:active::after{
+ border-color:var(--special-color);
 
 }
-.get-started--right:hover{
-  box-shadow: 0 0 5px var(--white-mix);
+.get-started:active::before{
+  border-color:var(--special-color);
+
 }
-.get-started--left:hover{
-    box-shadow:inset  0 0 10px 1px var(--lightBlue);
-    background-color: rgb(0, 0, 221);
-}
+
+
+
 
 
 
@@ -381,19 +417,19 @@ z-index: 20;
 
 
 .main__nav{
-    height: 20px; width:;
+ 
     background-color: transparent;
     z-index:999;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-24%);
+    position: fixed;
+    align-items: center;
+    top: -10px;
+ transform: translateX(155px);
     display:flex;
-    column-gap: 20px;
     color: var(--darkBlue);
     
 
     }
-   
+ 
 
 
 
@@ -404,15 +440,37 @@ z-index: 20;
     visibility: hidden;
     z-index: -1;
 }   
+.contact__number{
+    width: 155px;
+  color: aliceblue;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
 
-.r/*radiobtn*/{
+}
+.contact__number :where(span, svg){
+
+}
+
+
+.nav__link{
     font-size: calc(16px + .4%);
     text-transform: uppercase;
+
     font-weight: 600;
     user-select: none;
     cursor:pointer;
-    transition: .3s;
+    position: relative;
+    top: 10px;
+    transition: .2s linear;
+    padding: 10px;
+
 }    
+
+.nav__link:hover{
+    top: 15px;
+    
+}
 
   
 
@@ -424,7 +482,7 @@ z-index: 20;
     color: aliceblue;
 }
 
-.r:active{
+.nav__link:active{
     color: rgb(0, 225, 255);
 }    
 

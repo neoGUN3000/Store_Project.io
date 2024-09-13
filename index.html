@@ -22,36 +22,43 @@
            
    
  <main class="main">
-    <nav class="main__nav ">    
-        <input  type="radio" name="main-navigation" id="#r1" checked>
-        <input  type="radio" name="main-navigation" id="#r2">
-        <input  type="radio" name="main-navigation" id="#r3">  
-        <input  type="radio" name="main-navigation" id="#r4">
-        <input  type="radio" name="main-navigation" id="#r5">
-        <input  type="radio" name="main-navigation" id="#r6">
-        <input  type="radio" name="main-navigation" id="#r7">
-        
-        <label  class="r1 r"  for="#r1">home</label>
-        <label   class="r2 r" for="#r2">    oder </label>
-        <label  class="r3 r"  for="#r3">  equipment   </label>
-        <label   class="r4 r" for="#r4">   description  </label>
-        <label  class="r5 r" for="#r5">   delivery  </label>
-        <label  class="r6 r" for="#r6">    gifts</label>
-        <label   class="r7 r" for="#r7">    reviews  </label>
-    
-      
+  
+<section class="home__page page" id="home">
 
-     
-    </nav>
-<section class="home__page page " id="home">
-    <header class="heading ">
+    <header class="heading">
         
         <h2 class="logo">LOGO</h2>
+      
     </header>
 
-    <section class="container--left">
+    <section class="container--left ">
  
-      
+        <nav class="main__nav ">    
+            <input  type="radio" name="main-navigation" id="#r1" checked>
+            <input  type="radio" name="main-navigation" id="#r2">
+            <input  type="radio" name="main-navigation" id="#r3">  
+            <input  type="radio" name="main-navigation" id="#r4">
+            <input  type="radio" name="main-navigation" id="#r5">
+            <input  type="radio" name="main-navigation" id="#r6">
+            <input  type="radio" name="main-navigation" id="#r7">
+            
+            <label  class="r1 r"  for="#r1"><a class="nav__link" href="#home">home</a></label>
+            <label   class="r2 r" for="#r2">    <a class="nav__link" href="#oder">oder</a> </label>
+            <label   class="r7 r" for="#r7">    <a class="nav__link" href="#reviews">reviews</a></label>
+            <label  class="r3 r"  for="#r3">  <a class="nav__link" href="#equipment">equipment</a>   </label>
+            <label   class="r4 r" for="#r4">   <a class="nav__link" href="#description">description</a>  </label>
+            <label  class="r5 r" for="#r5">   <a class="nav__link" href="#delivery">delivery</a>  </label>
+            <label  class="r6 r" for="#r6">    <a class="nav__link" href="#gifts">gifts</a ></label>
+        
+                <a href="#tell" class="contact__number nav__link"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-2 ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                      </svg>
+                      <span>0722725010</span>
+                </a>
+    
+         
+        </nav>
             <h2 class="namingProduct--left">Электронная книга </h2>
              
 
@@ -67,21 +74,17 @@
 
     <section class="container--right">
        
-        
-   
-        
-        </div>
-        
         <h1 class="namingProduct--right">PocketBook 629 Verse</h1>
         
-        <div class="product__characteristics">
-            <div class="product-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-7">
+            <div class="product-icon ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-fit">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 4.5v15a2.25 2.25 0 0 0 2.25 2.25Z" />
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-4 absolute top-1">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                  </svg>
+                  <span class="svg__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-fit">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                      </svg>
+                  </span>
                   
             </div>
             <ul class="desc-list " >
@@ -91,24 +94,16 @@
                 <li class="desc-list__row"> 182 грамм </li>
                 <li class="desc-list__row">Размер экрана 6" инч</li>
             </ul>
-        </div>
+            <a href="#make-oder" class="get-started"> <span>заказать сейчас</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="darkblue" class="size-6 ml-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg>
+                  
+            </a>
+   
         
       
-           <div class="btn-wrapper">
-                <a href="#tell" class="get-started--left"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-2 ml-2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
-                      </svg>
-                      <span>0722725010</span>
-                </a>
-                    <a href="#make-oder" class="get-started--right"> <span>заказать сейчас</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="darkblue" class="size-6 ml-2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                          </svg>
-                          
-                    </a>
-           </div>
-      
+       
         
 </section>
 
@@ -117,6 +112,18 @@
 
 <nav>
     <a href="#home" class="anchor "><img src="./img/icons/chevron-down-svgrepo-com copy.svg" alt="anchor" ></a></nav>
+
+
+    <section class="to_oder__page page" id="oder">
+        <header class="heading ">
+            <h2 class="" title="oder">oder</h2>
+            <img src="" alt="">
+        </header>
+    
+      
+    </section>
+
+
 
 <section class="to_reviews__page page" id="reviews">
     
@@ -202,14 +209,7 @@
         <img src="" alt="">
     </header>
 </section>
-<section class="to_reviews__page page" id="reviews">
-    <header class="heading ">
-        <h2 class title="to_reviews__page">reviews-page</h2>
-        <img src="" alt="">
-    </header>
 
-  
-</section>
  </main>
 
 

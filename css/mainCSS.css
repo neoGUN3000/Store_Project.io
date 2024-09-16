@@ -241,7 +241,7 @@ cursor: pointer;
     width: clamp(300px, 29vw, 600px); 
     height: clamp(300px, 25vw, 400px);
     position: absolute;
-    top: 50vh;left:20%;
+    top: 50vh;right:0%;
     transform: translate(-50%, -50%);
     z-index: 0;
     
@@ -325,6 +325,10 @@ cursor: pointer;
 
 
 .get-started{
+    padding:10px 25px;
+    width: clamp(10px, 25vw, 300px);
+    
+    
     position: relative;
     bottom: 20%;
 
@@ -332,6 +336,7 @@ cursor: pointer;
 
     align-self: center;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
@@ -341,9 +346,8 @@ cursor: pointer;
     
     background-color: var(--white-mix);
     color: var(--darkBlue);
-    padding:10px 25px;
     font-weight: 600;
-    font-size: calc(16px + .4%);
+    font-size: calc(13px + .4%);
     text-transform: uppercase;
     
     transition: .3s;
@@ -468,7 +472,7 @@ cursor: pointer;
 }   
 .nav__link:hover{
     top: 5px;
-    
+    /* color: var(--special-color); */
 }
 .contact__number{
    
@@ -507,14 +511,14 @@ color: var(--special-color);
 
   
 .colorGiverBlackBlue{
-    color:rgb(0, 255, 76);
+    color:rgb(0, 9, 94);
 }
-.colorGiverRightSide{
-    color: aliceblue;
+.colorGiver {
+    color:var(--special-color);
 }
 
 .nav__link:active{
-    color: rgb(0, 174, 255);
+    color: rgba(0, 255, 42, 0.329);
 }    
 
 
